@@ -1,0 +1,43 @@
+/* No Tax on Tips calculator widget. MIT License. Made by Tipling (https://tiplingapp.com). */
+#no-tax-on-tips-calculator {
+  --nttc-ink: #2b211b; --nttc-text: #5c5047; --nttc-soft: #8f8378; --nttc-line: #ece5dc;
+  --nttc-bg: #ffffff; --nttc-tint: #fff6ea; --nttc-accent: #d9773a; --nttc-green: #2f8a5e;
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px;
+  font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--nttc-ink);
+}
+.nttc-form, .nttc-result { background: var(--nttc-bg); border: 1px solid var(--nttc-line); border-radius: 16px; padding: 22px; }
+.nttc-result { background: var(--nttc-tint); border-color: transparent; align-self: start; }
+.nttc-form label { display: block; margin: 0 0 16px; font-weight: 600; font-size: 15px; }
+.nttc-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.nttc-hint { display: block; font-weight: 400; font-size: 13px; color: var(--nttc-soft); margin: 2px 0 6px; }
+.nttc-form select, .nttc-form input[inputmode] {
+  display: block; width: 100%; box-sizing: border-box; margin-top: 6px; padding: 11px 12px; font: inherit; font-size: 17px;
+  color: var(--nttc-ink); background: #fff; border: 1px solid #d9cfc4; border-radius: 10px;
+}
+.nttc-row select { margin-top: 6px; }
+.nttc-money { position: relative; display: block; }
+.nttc-money::before { content: "$"; position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--nttc-soft); font-size: 17px; }
+.nttc-money input[inputmode] { padding-left: 26px; margin-top: 0; }
+.nttc-form input:focus, .nttc-form select:focus { outline: 2px solid var(--nttc-accent); outline-offset: 1px; border-color: transparent; }
+.nttc-more { margin: 0 0 16px; }
+.nttc-more summary { cursor: pointer; color: var(--nttc-accent); font-weight: 600; font-size: 15px; margin-bottom: 12px; }
+.nttc-check { border: 0; padding: 0; margin: 0; }
+.nttc-check legend { font-weight: 600; font-size: 15px; margin-bottom: 8px; padding: 0; }
+.nttc-check label { display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: 14.5px; margin: 0 0 8px; color: var(--nttc-text); }
+.nttc-check input { width: 18px; height: 18px; margin: 2px 0 0; accent-color: var(--nttc-accent); flex: none; }
+.nttc-label { margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--nttc-soft); }
+.nttc-big { margin: 4px 0 6px; font-size: 44px; line-height: 1.1; font-weight: 800; letter-spacing: -0.02em; }
+.nttc-save { margin: 0 0 16px; font-size: 17px; color: var(--nttc-text); }
+.nttc-save b { color: var(--nttc-green); font-size: 22px; }
+.nttc-warn { margin: 0 0 12px; padding: 10px 12px; background: #fff; border-left: 3px solid var(--nttc-accent); border-radius: 0 8px 8px 0; font-size: 14.5px; }
+.nttc-table { width: 100%; border-collapse: collapse; font-size: 14.5px; margin: 0 0 14px; }
+.nttc-table td { padding: 8px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.07); vertical-align: top; }
+.nttc-table td:last-child { text-align: right; font-weight: 600; white-space: nowrap; padding-left: 12px; }
+.nttc-note { margin: 0 0 8px; font-size: 13px; color: var(--nttc-soft); }
+@media (max-width: 760px) {
+  #no-tax-on-tips-calculator { grid-template-columns: 1fr; }
+}
+@media (max-width: 420px) {
+  .nttc-row { grid-template-columns: 1fr; }
+  .nttc-big { font-size: 38px; }
+}

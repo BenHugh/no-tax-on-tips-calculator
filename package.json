@@ -1,0 +1,10 @@
+{
+  "name": "no-tax-on-tips-calculator",
+  "version": "1.0.0",
+  "description": "Calculator for the US federal qualified tips deduction (No Tax on Tips, 2025-2028), following IRS Schedule 1-A.",
+  "main": "no-tax-on-tips.js",
+  "scripts": { "test": "node --test" },
+  "keywords": ["no tax on tips", "tips deduction", "tax calculator", "schedule 1-a", "irs", "tipped workers"],
+  "homepage": "https://tiplingapp.com/no-tax-on-tips-calculator/",
+  "license": "MIT"
+}
